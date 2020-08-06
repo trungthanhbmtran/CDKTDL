@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
-import Send_Post_Graphql from '../Request/imw_request';
+import Send_Post_RestAPI from '../Request/imw_request';
 
 
 class LoginComponent extends React.Component {
@@ -20,9 +20,10 @@ class LoginComponent extends React.Component {
 
   async handleSubmit(event) {
     event.preventDefault();
-     let res = await fetch('http://localhost:3001/admin')
-     let posts = await res.json()
-     console.log(posts);
+     let res = await Send_Post_RestAPI({})
+     console.log(res)
+     let data = await res.json()
+     console.log(data);
   }
   render() {
     return (
