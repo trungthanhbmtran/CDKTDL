@@ -25,7 +25,7 @@ const server = app.listen(process.env.PORT || 3001, function () {
 const dbConfig = {
     user: 'imw',
     password: 'abcd1234@@huyfan91',
-    server: '27.79.1.50',
+    server: '116.98.190.70',
     database: 'imw_QuanLyDaoTaoTinChi'
 }
   

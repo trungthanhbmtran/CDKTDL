@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
-import Send_Post_RestAPI from '../Request/imw_request';
+import {Send_Get_RestAPI} from '../Request/imw_request';
 
 
 class LoginComponent extends React.Component {
@@ -20,7 +20,7 @@ class LoginComponent extends React.Component {
 
   async handleSubmit(event) {
     event.preventDefault();
-     let res = await Send_Post_RestAPI()
+     let res = await Send_Get_RestAPI('http://localhost:3001/admin')
      console.log(res)
      let data = await res.json()
      console.log(data);

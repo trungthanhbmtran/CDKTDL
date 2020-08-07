@@ -1,10 +1,10 @@
 import fetch from 'isomorphic-unfetch';
 
 module.exports = {
-    Send_Post_RestAPI: function(data){
+    Send_Post_RestAPI: function(url,data){
         return new Promise((resove, reject)=>{
-            const res = fetch('http://localhost:3001/admin',{
-                method: 'POST',
+            const res = fetch(url,{
+                method: 'GET',
                 mode: 'cors',
                 headers: {
                   'Content-Type': 'application/json; charset=utf-8',
@@ -16,4 +16,18 @@ module.exports = {
             resove(res);
         });
     },
+    Send_Get_RestAPI: function(url){
+      return new Promise((resove, reject)=>{
+          const res = fetch(url,{
+              method: 'GET',
+              mode: 'cors',
+              headers: {
+                'Content-Type': 'application/json; charset=utf-8',
+                'Accept': 'application/json',
+              }
+            });
+          //reject('error');
+          resove(res);
+      });
+  },
 }
