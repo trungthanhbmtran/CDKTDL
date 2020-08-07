@@ -5,6 +5,7 @@ import { AppProps } from 'next/app';
 import Header from './header'
 import SidebarMenu from './sidebarmenu.js'
 import AddStundents from './ContainerComponents/addStundents'
+var css = 'ul:before { content: "test"; display: block; } ul:after { content: "test"; display: block; }';
 
 
 class Layout extends React.Component {
@@ -15,8 +16,10 @@ class Layout extends React.Component {
             create: "thanh"
         }
     }
+    
     render() {
         return (
+            <>
             <div className="page-wrapper">
                 {/* start header */}
                 <div className="page-header navbar navbar-fixed-top">
@@ -350,6 +353,19 @@ class Layout extends React.Component {
                 </div>
                 {/* end footer */}
             </div>
+            <script src="../assets/plugins/jquery/jquery.min.js"></script>
+            <script src="../assets/plugins/popper/popper.js"></script>
+            <script src="../assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
+            <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script src="../assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+            <script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+            <script src="../assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+            <script src="../assets/js/pages/table/table_data.js"></script>
+            <script src="../assets/js/app.js"></script>
+            <script src="../assets/js/layout.js"></script>
+            <script src="../assets/js/theme-color.js"></script>
+            <script src="../assets/plugins/material/material.min.js"></script>
+            </>
         )
     }
 }

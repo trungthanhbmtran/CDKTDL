@@ -40,16 +40,6 @@ class Index extends React.Component {
         <Layout {...this.props}>
           <Blank/>
         </Layout>
-        <script src="../assets/plugins/jquery/jquery.min.js"></script>
-	<script src="../assets/plugins/popper/popper.js"></script>
-	<script src="../assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
-	<script src="../assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
-	<script src="../assets/js/app.js"></script>
-	<script src="../assets/js/layout.js"></script>
-	<script src="../assets/js/theme-color.js"></script>
-	<script src="../assets/plugins/material/material.min.js"></script>
             </>
     )
   }

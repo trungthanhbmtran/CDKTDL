@@ -20,7 +20,7 @@ class LoginComponent extends React.Component {
 
   async handleSubmit(event) {
     event.preventDefault();
-     let res = await Send_Post_RestAPI({})
+     let res = await Send_Post_RestAPI()
      console.log(res)
      let data = await res.json()
      console.log(data);

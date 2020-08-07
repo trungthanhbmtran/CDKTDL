@@ -60,7 +60,12 @@ const QueryToExecuteInDatabase = function (response, strQuery) {
 app.get("/admin", function(_req ,_res){  
     const Sqlquery = "select * from Admin";  
     QueryToExecuteInDatabase(_res, Sqlquery);  
-});  
+});
+app.post("/login", function(_req ,_res){  
+    const _id  = _req.params.id;
+    const Sqlquery = `select * from Admin where ${_id}`
+    QueryToExecuteInDatabase(_res, Sqlquery);  
+});
 
 
 

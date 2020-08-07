@@ -41,21 +41,11 @@ class SidebarMenu extends React.Component {
                 <span className="arrow" />
               </a>
               <ul className="sub-menu">
-                <li className="nav-item   ">
-                  <a href="index.html" className="nav-link ">
-                    <span className="title">Dashboard 1</span>
-                  </a>
-                </li>
-                <li className="nav-item ">
-                  <a href="dashboard2.html" className="nav-link ">
-                    <span className="title">Dashboard 2</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="dashboard3.html" className="nav-link ">
-                    <span className="title">Dashboard 3</span>
-                  </a>
-                </li>
+                  <li className="nav-item">
+                      <a href="index.html" className="nav-link ">
+                        <span className="title">Dashboard 1</span>
+                      </a>
+                    </li>
               </ul>
             </li>
             <li className="nav-item">
