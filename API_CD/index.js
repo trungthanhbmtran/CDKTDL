@@ -5,18 +5,20 @@ const app = _expressPackage();
 //To parse result in json format  
 app.use(_bodyParserPackage.json());  
 // Connection string parameters.
-
-//middware require router
-const userRoute = require('./Controller/Users')
-
-app.use('/users', userRoute);
-
 app.use(function (req, res, next) {  
     res.header("Access-Control-Allow-Origin", "*");  
     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");  
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, contentType,Content-Type, Accept, Authorization");  
     next();  
 });  
+//middware require router
+const userRoute = require('./Controller/Users')
+const loginRoute = require('./Controller/Login')
+
+app.use('/users', userRoute);
+app.use('/login',loginRoute);
+
+
   
 //Lets set up our local server now.  
 const server = app.listen(process.env.PORT || 3001, function () {  

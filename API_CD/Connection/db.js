@@ -1,10 +1,10 @@
 const _sqlPackage = require("mssql");
 
 const dbConfig = {
-    user: 'imw',
-    password: 'abcd1234@@huyfan91',
+    user: 'sa',
+    password: 'thanh123',
     server: '116.98.190.70',
-    database: 'imw_QuanLyDaoTaoTinChi'
+    database: 'ERP'
 }
 
 const poolPromise = new _sqlPackage.ConnectionPool(dbConfig)
