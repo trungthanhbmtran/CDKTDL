@@ -4,7 +4,7 @@ module.exports = {
     Send_Post_RestAPI: function(url,data){
         return new Promise((resove, reject)=>{
             const res = fetch(url,{
-                method: 'GET',
+                method: 'POST',
                 mode: 'cors',
                 headers: {
                   'Content-Type': 'application/json; charset=utf-8',
