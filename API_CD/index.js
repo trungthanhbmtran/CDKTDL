@@ -3,7 +3,8 @@ const _bodyParserPackage = require("body-parser");
 //Initilize app with express web framework  
 const app = _expressPackage();  
 //To parse result in json format  
-app.use(_bodyParserPackage.json());  
+app.use(_bodyParserPackage.json()); 
+app.use(_bodyParserPackage.urlencoded({extended: true }));  
 // Connection string parameters.
 app.use(function (req, res, next) {  
     res.header("Access-Control-Allow-Origin", "*");  

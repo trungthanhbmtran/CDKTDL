@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
-import {Send_Get_RestAPI} from '../Request/imw_request';
+import {Send_Post_RestAPI} from '../Request/imw_request';
+import { DH_NOT_SUITABLE_GENERATOR } from 'constants';
 
 
 class LoginComponent extends React.Component {
@@ -12,18 +13,31 @@ class LoginComponent extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
+   handleChange(event) {
     this.setState({
-      [event.target.name] : event.target.value,
-    });
-  };
+        [event.target.name]: event.target.value,
+      });
+}
 
   async handleSubmit(event) {
     event.preventDefault();
-     let res = await Send_Get_RestAPI('http://localhost:3001/users')
-     let data = await res.json()
+     let inputPost = {"username" : this.state.username}
+     let res = await Send_Post_RestAPI('http://localhost:3001/login',inputPost)
+     let data = await res.json();
      console.log(data)
-      console.log(data)    
+      let {UserName,Pass,User_ID} = data[0];
+      console.log(UserName) 
+      console.log(Pass)
+      console.log(typeof this.state.username);
+      console.log(typeof UserName);
+      console.log(typeof Pass);
+      console.log(UserName.length)
+      console.log(this.state.username.length)
+     if( this.state.username === UserName.replace(/\s/g,'') && this.state.password === Pass.replace(/\s/g,'')){
+       Router.push('/index')
+     }else{
+       Router.push('/login')
+     }
   }
   render() {
     return (
@@ -39,7 +53,7 @@ class LoginComponent extends React.Component {
             </span>
             <div className="wrap-input100 validate-input" data-validate="Enter username">
               <input className="input100" type="text" name="username" placeholder="Username" value={this.state.username}
-              onChange={this.handleChange}/>
+              onChange={this.handleChange} />
               <span className="focus-input100" data-placeholder="" />
             </div>
             <div className="wrap-input100 validate-input" data-validate="Enter password" >
@@ -71,4 +85,3 @@ class LoginComponent extends React.Component {
   }
 }
 export default LoginComponent;
-

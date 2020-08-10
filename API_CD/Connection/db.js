@@ -1,8 +1,8 @@
 const _sqlPackage = require("mssql");
 
 const dbConfig = {
-    user: 'sa',
-    password: 'thanh123',
+    user: 'imw',
+    password: 'abcd1234@@huyfan91',
     server: '116.98.190.70',
     database: 'ERP'
 }

@@ -10,7 +10,7 @@ module.exports = {
                   'Content-Type': 'application/json; charset=utf-8',
                   'Accept': 'application/json',
                 },
-                body: JSON.stringify({data:data})
+                body: JSON.stringify(data)
               });
             //reject('error');
             resove(res);
