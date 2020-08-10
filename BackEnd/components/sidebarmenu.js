@@ -89,12 +89,12 @@ class SidebarMenu extends React.Component {
                 <span className="title">Students</span><span className="arrow" /></a>
               <ul className="sub-menu">
                 <li className="nav-item">
-                  <a href="all_students.html" className="nav-link "> <span className="title">All
+                  <a href='all_students' className="nav-link "> <span className="title">All
                       Students</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="add_student.html" className="nav-link "> <span className="title">Add
+                  <a href='add_stundents' className="nav-link "> <span className="title">Add
                       Student</span>
                   </a>
                 </li>
@@ -207,7 +207,7 @@ class SidebarMenu extends React.Component {
               </a>
               <ul className="sub-menu">
                 <li className="nav-item">
-                  <a href="all_staffs.html" className="nav-link "> <span className="title">All
+                  <a href='all_staff' className="nav-link "> <span className="title">All
                       Staff</span>
                   </a>
                 </li>

@@ -40,6 +40,7 @@ class Index extends React.Component {
         <Layout {...this.props}>
           <Blank/>
         </Layout>
+        
             </>
     )
   }

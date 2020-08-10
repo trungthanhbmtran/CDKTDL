@@ -14,7 +14,7 @@ class Login extends React.Component {
   render() {
     return (
       <>
-        <Head>
+      <Head>
             <meta charSet="utf-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
             <meta content="width=device-width, initial-scale=1" name="viewport" />

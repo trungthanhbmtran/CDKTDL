@@ -36,6 +36,7 @@ class LoginComponent extends React.Component {
      if( this.state.username === UserName.replace(/\s/g,'') && this.state.password === Pass.replace(/\s/g,'')){
        Router.push('/index')
      }else{
+       alert('mat khau sai')
        Router.push('/login')
      }
   }
@@ -53,12 +54,12 @@ class LoginComponent extends React.Component {
             </span>
             <div className="wrap-input100 validate-input" data-validate="Enter username">
               <input className="input100" type="text" name="username" placeholder="Username" value={this.state.username}
-              onChange={this.handleChange} />
+              onChange={this.handleChange} required/>
               <span className="focus-input100" data-placeholder="" />
             </div>
             <div className="wrap-input100 validate-input" data-validate="Enter password" >
               <input className="input100" type="password" name="password" placeholder="Password" value={this.state.password}
-              onChange={this.handleChange} />
+              onChange={this.handleChange} required/>
               <span className="focus-input100" data-placeholder="" />
             </div>
             <div className="contact100-form-checkbox">
