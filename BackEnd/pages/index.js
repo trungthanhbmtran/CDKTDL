@@ -6,6 +6,7 @@ import Blank from '../components/ContainerComponents/blank';
 
 
 class Index extends React.Component {
+ 
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +41,6 @@ class Index extends React.Component {
         <Layout {...this.props}>
           <Blank/>
         </Layout>
-        
             </>
     )
   }

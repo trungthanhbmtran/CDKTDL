@@ -30,21 +30,21 @@ class Header extends React.Component {
             <div className="input-group">
               <input type="text" className="form-control" placeholder="Search..." name="query" />
               <span className="input-group-btn">
-                <a href="javascript:;" className="btn submit">
+                <a href="  " className="btn submit">
                   <i className="icon-magnifier" />
                 </a>
               </span>
             </div>
           </form>
           {/* start mobile menu */}
-          <a href="javascript:;" className="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+          <a href="  " className="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
             <span />
           </a>
           {/* end mobile menu */}
           {/* start header menu */}
           <div className="top-menu">
             <ul className="nav navbar-nav pull-right">
-              <li><a href="javascript:;" className="fullscreen-btn"><i className="fa fa-arrows-alt" /></a></li>
+              <li><a href="  " className="fullscreen-btn"><i className="fa fa-arrows-alt" /></a></li>
               {/* start language menu */}
               <li className="dropdown language-switch">
                 <a className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="../assets/img/flags/gb.png" className="position-left" alt="" /> English <span className="fa fa-angle-down" />
@@ -70,7 +70,7 @@ class Header extends React.Component {
               {/* end language menu */}
               {/* start notification dropdown */}
               <li className="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-                <a href="javascript:;" className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="  " className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                   <i className="fa fa-bell-o" />
                   <span className="badge headerBadgeColor1"> 6 </span>
                 </a>
@@ -82,7 +82,7 @@ class Header extends React.Component {
                   <li>
                     <ul className="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
                       <li>
-                        <a href="javascript:;">
+                        <a href="  ">
                           <span className="time">just now</span>
                           <span className="details">
                             <span className="notification-icon circle deepPink-bgcolor"><i className="fa fa-check" /></span>
@@ -90,7 +90,7 @@ class Header extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="  ">
                           <span className="time">3 mins</span>
                           <span className="details">
                             <span className="notification-icon circle purple-bgcolor"><i className="fa fa-user o" /></span>
@@ -98,7 +98,7 @@ class Header extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="  ">
                           <span className="time">7 mins</span>
                           <span className="details">
                             <span className="notification-icon circle blue-bgcolor"><i className="fa fa-comments-o" /></span>
@@ -106,7 +106,7 @@ class Header extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="  ">
                           <span className="time">12 mins</span>
                           <span className="details">
                             <span className="notification-icon circle pink"><i className="fa fa-heart" /></span>
@@ -114,14 +114,14 @@ class Header extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="  ">
                           <span className="time">15 mins</span>
                           <span className="details">
                             <span className="notification-icon circle yellow"><i className="fa fa-warning" /></span> Warning! </span>
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="  ">
                           <span className="time">10 hrs</span>
                           <span className="details">
                             <span className="notification-icon circle red"><i className="fa fa-times" /></span> Application error. </span>
@@ -129,7 +129,7 @@ class Header extends React.Component {
                       </li>
                     </ul>
                     <div className="dropdown-menu-footer">
-                      <a href="javascript:void(0)"> All notifications </a>
+                      <a href=""> All notifications </a>
                     </div>
                   </li>
                 </ul>
@@ -137,7 +137,7 @@ class Header extends React.Component {
               {/* end notification dropdown */}
               {/* start message dropdown */}
               <li className="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-                <a href="javascript:;" className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="  " className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                   <i className="fa fa-envelope-o" />
                   <span className="badge headerBadgeColor2"> 2 </span>
                 </a>
@@ -219,7 +219,7 @@ class Header extends React.Component {
               {/* end message dropdown */}
               {/* start manage user dropdown */}
               <li className="dropdown dropdown-user">
-                <a href="javascript:;" className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <a href="  " className="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                   <img alt="" className="img-circle " src="../assets/img/dp.jpg" />
                   <span className="username username-hide-on-mobile"> Kiran </span>
                   <i className="fa fa-angle-down" />

@@ -14,7 +14,6 @@ class Layout extends React.Component {
     }
     
     render() { 
-        console.log(this.props)
         return (
             <>
             <div className="page-wrapper">
@@ -26,7 +25,7 @@ class Layout extends React.Component {
                 {/* end header */}
                 {/* start color quick setting */}
                 <div className="settingSidebar">
-                    <a href="javascript:void(0)" className="settingPanelToggle"> <i className="fa fa-spin fa-cog" />
+                    <a href="" className="settingPanelToggle"> <i className="fa fa-spin fa-cog" />
                     </a>
                     <div className="settingSidebar-body ps-container ps-theme-default">
                         <div className=" fade show active">

@@ -24,6 +24,10 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
+    "/add_students": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/all_staff": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

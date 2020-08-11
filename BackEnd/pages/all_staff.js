@@ -3,14 +3,24 @@ import Head from 'next/head';
 import { AppProps } from 'next/app';
 import Layout from '../components/Layout';
 import AllStaffComponent from '../components/ContainerComponents/allStaff'
+import {Send_Get_RestAPI} from '../Request/imw_request'
 
 
 class AllStaff extends React.Component {
+
+  static async getInitialProps(ctx) {
+    const res = await Send_Get_RestAPI('http://localhost:3001/staff')//them vo
+    const json = await res.json();
+    //json cua e ra roi con gi nua
+    //no van con log
+    return {results : json , header: 'List Staff' };
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       counters: 0,
-      create: "thanh"
+      create: "thanh",
     }
   }
   render() {
@@ -40,7 +50,7 @@ class AllStaff extends React.Component {
           <link rel="shortcut icon" href="../assets/img/favicon.ico" />
         </Head>
         <Layout {...this.props}>
-          <AllStaffComponent/>
+          <AllStaffComponent {...this.props}/>
         </Layout>
         
           

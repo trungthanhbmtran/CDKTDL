@@ -15,7 +15,6 @@ class BlankPage extends React.Component {
   }
   render() {
     console.log(this.props.children)
-    console.log(this.props)
     return (
       <div className="page-content-wrapper">
         <div className="page-content">

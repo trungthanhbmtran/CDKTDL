@@ -7,39 +7,95 @@ import {Send_Get_RestAPI} from '../../Request/imw_request'
 
 
 class AllStaffComponent extends React.Component {
-  static async getInitialProps(ctx) {
-    const res = await Send_Get_RestAPI('http://localhost:3001/staff')
-    const json = await res.json()
-    return {results : json};
-  }
   constructor(props) {
     super(props);
     this.state = {
       counters: 0,
       create: "thanh",
-      students: [
-        { id: 1, name: 'Wasif', age: 21, email: 'wasif@email.com',Action:'' },
-        { id: 2, name: 'Ali', age: 19, email: 'ali@email.com', },
-        { id: 3, name: 'Saad', age: 16, email: 'saad@email.com' },
-        { id: 4, name: 'Asad', age: 25, email: 'asad@email.com' }
-     ]
+      students: this.props.results
     }
   }
    renderTableData() {
-    return this.state.students.map((student, index) => {
-      const { id, name, age, email } = student
+    return this.state.students.map((staff, index) => {
+      const {
+        MANHANVIEN,
+        HOTEN,
+        BIDANH,
+        NGAYSINH,
+        GIOITINH,
+        VANHOA,
+        NGOAINGU,
+        SOTRUONG,
+        CHUYENMON,
+        TRINHDO,
+        NGAYLUUHS,
+        LYDOLUUHS,
+        TRANGTHAI,
+        DANTOC,
+        TONGIAO,
+        SOBHXH,
+        NOI_DKKCB,
+        NHANVIEN_ID,
+        ngaynhap,
+        nguoinhap,
+        ngaysua,
+        nguoisua,
+        SOCMND,
+        NGAYCAP,
+        NOICAP,
+        DIDONG,
+        DIENTHOAIBAN,
+        DIACHIEMAIL,
+        MASOTHUE,
+        Diachi,
+        Quequan,
+        Website,
+        bangcapkhac,
+        chungchikhac,
+        uudiem,
+        khuyetdiem,
+        diachilienhe,
+        kinhnghiem
+      } = staff;
       return (
-        <tr key={id}>
-          <td>{id}</td>
-          <td>{name}</td>
-          <td>{age}</td>
-          <td>{email}</td>
-          <td> <a href="edit_professor.html" className="btn btn-primary btn-xs">
-                                        <i className="fa fa-pencil" />
-                                      </a>
-                                      <button className="btn btn-danger btn-xs">
-                                        <i className="fa fa-trash-o " />
-            </button></td>
+        <tr key={MANHANVIEN}>
+          <td>{MANHANVIEN}</td>
+          <td>{HOTEN}</td>
+          <td>{BIDANH}</td>
+          <td>{NGAYSINH}</td>
+          <td>{GIOITINH}</td>
+          <td>{VANHOA}</td>
+          <td>{NGOAINGU}</td>
+          <td>{SOTRUONG}</td>
+          <td>{CHUYENMON}</td>
+          <td>{TRINHDO}</td>
+          <td>{NGAYLUUHS}</td>
+          <td>{LYDOLUUHS}</td>
+          <td>{TRANGTHAI}</td>
+          <td>{DANTOC}</td>
+          <td>{TONGIAO}</td>
+          <td>{SOBHXH}</td>
+          <td>{NOI_DKKCB}</td>
+          <td>{NHANVIEN_ID}</td>
+          <td>{ngaynhap}</td>
+          <td>{nguoinhap}</td>
+          <td>{ngaysua}</td>
+          <td>{nguoisua}</td>
+          <td>{SOCMND}</td>
+          <td>{NGAYCAP}</td>
+          <td>{DIDONG}</td>
+          <td>{DIENTHOAIBAN}</td>
+          <td>{DIACHIEMAIL}</td>
+          <td>{MASOTHUE}</td>
+          <td>{Diachi}</td>
+          <td>{Quequan}</td>
+          <td>{Website}</td>
+          <td>{bangcapkhac}</td>
+          <td>{chungchikhac}</td>
+          <td>{uudiem}</td>
+          <td>{khuyetdiem}</td>
+          <td>{diachilienhe}</td>
+          <td>{kinhnghiem}</td>
         </tr>
       )
     })
@@ -50,20 +106,21 @@ class AllStaffComponent extends React.Component {
     return header.map((key, index) => <th key={index}>{key.toUpperCase()}</th>)
   }
   render() {
+    console.log(this.props.header)
     return (
         <>
         <div className="page-content">
           <div className="page-bar">
             <div className="page-title-breadcrumb">
               <div className=" pull-left">
-                <div className="page-title">All Students List</div>
+    <div className="page-title">{this.props.header}</div>
               </div>
               <ol className="breadcrumb page-breadcrumb pull-right">
                 <li><i className="fa fa-home" />&nbsp;<a className="parent-item" href="index.html">Home</a>&nbsp;<i className="fa fa-angle-right" />
                 </li>
                 <li><a className="parent-item" href>Students</a>&nbsp;<i className="fa fa-angle-right" />
                 </li>
-                <li className="active">All Students List</li>
+    <li className="active">{this.props.header}</li>
               </ol>
             </div>
           </div>
@@ -82,7 +139,7 @@ class AllStaffComponent extends React.Component {
                       <div className="col-md-12">
                         <div className="card card-box">
                           <div className="card-head">
-                            <header>All Students List</header>
+                            <header>{this.props.header}</header>
                             <div className="tools">
                               <a className="fa fa-repeat btn-color box-refresh" href="javascript:;" />
                               <a className="t-collapse btn-color fa fa-chevron-down" href="javascript:;" />
@@ -127,7 +184,7 @@ class AllStaffComponent extends React.Component {
                             <div className="table-scrollable">
                               <table className="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
                                 <thead>
-                                <tr>{this.renderTableHeader()},</tr>
+                                <tr>{this.renderTableHeader()}</tr>
                                 </thead>
                                 <tbody>
                                 {this.renderTableData()}
