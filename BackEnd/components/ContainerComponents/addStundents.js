@@ -10,9 +10,12 @@ class AddStundents extends React.Component {
     this.state = {
       counters: 0,
       create: "thanh"
-    }
+    
   }
+ 
+}
   render() {
+    console.log(this.props)
     return (
         <>
         <div className="page-content">

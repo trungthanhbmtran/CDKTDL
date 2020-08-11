@@ -1,11 +1,7 @@
 
 import React, { useState } from 'react';
-import Head from 'next/head';
-import { AppProps } from 'next/app';
 import Header from './header'
 import SidebarMenu from './sidebarmenu.js'
-import AddStundents from './ContainerComponents/addStundents'
-var css = 'ul:before { content: "test"; display: block; } ul:after { content: "test"; display: block; }';
 
 
 class Layout extends React.Component {
@@ -17,7 +13,8 @@ class Layout extends React.Component {
         }
     }
     
-    render() {
+    render() { 
+        console.log(this.props)
         return (
             <>
             <div className="page-wrapper">

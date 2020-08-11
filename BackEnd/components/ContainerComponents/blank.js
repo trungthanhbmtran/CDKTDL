@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
+import Modal from '../Modal/modalStaff'
 
 
 
@@ -13,6 +14,8 @@ class BlankPage extends React.Component {
     }
   }
   render() {
+    console.log(this.props.children)
+    console.log(this.props)
     return (
       <div className="page-content-wrapper">
         <div className="page-content">
@@ -29,6 +32,7 @@ class BlankPage extends React.Component {
             </div>
           </div>
           {/* add content here */}
+         
         </div>
       </div>
     )

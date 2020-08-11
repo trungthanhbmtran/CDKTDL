@@ -15,10 +15,10 @@ app.use(function (req, res, next) {
 //middware require router
 const userRoute = require('./Controller/Users')
 const loginRoute = require('./Controller/Login')
-
+const staffRoute = require('./Controller/Staff')
 app.use('/users', userRoute);
 app.use('/login',loginRoute);
-
+app.use('/staff',staffRoute);
 
   
 //Lets set up our local server now.  

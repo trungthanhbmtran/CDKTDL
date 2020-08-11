@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import Layout from '../components/Layout';
-import Blank from '../components/ContainerComponents/blank'
+import Blank from '../components/ContainerComponents/blank';
 
 
 class Index extends React.Component {
@@ -46,3 +46,4 @@ class Index extends React.Component {
   }
 }
 export default Index;
+
