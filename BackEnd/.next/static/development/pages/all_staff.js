@@ -612,7 +612,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fall_staff&absolutePagePath=%2FUsers%2Ftrungthanh%2FDesktop%2FProject%2FBackEnd%2Fpages%2Fall_staff.js ***!
   \****************************************************************************************************************************************************/
@@ -635,4 +635,4 @@ eval("module.exports = dll_5030f387d328e4415785;//# sourceURL=[module]\n//# sour
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
