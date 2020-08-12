@@ -10,8 +10,10 @@ class AddStundents extends React.Component {
     this.state = {
       counters: 0,
       create: "thanh"
-    }
+    
   }
+ 
+}
   render() {
     return (
         <>

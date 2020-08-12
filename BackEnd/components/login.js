@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { AppProps } from 'next/app';
 import Router from 'next/router';
 import {Send_Post_RestAPI} from '../Request/imw_request';
-import { DH_NOT_SUITABLE_GENERATOR } from 'constants';
 
 
 class LoginComponent extends React.Component {

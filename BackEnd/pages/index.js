@@ -6,6 +6,11 @@ import Blank from '../components/ContainerComponents/blank'
 
 
 class Index extends React.Component {
+  static async getInitialProps () {
+    const res = await fetch('https://api.pokemontcg.io/v1/cards?pages=1&pageSize=10')
+    const data = await res.json()
+    return data;
+}
   constructor(props) {
     super(props);
     this.state = {

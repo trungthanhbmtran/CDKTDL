@@ -5,7 +5,6 @@ import { AppProps } from 'next/app';
 import Header from './header'
 import SidebarMenu from './sidebarmenu.js'
 import AddStundents from './ContainerComponents/addStundents'
-var css = 'ul:before { content: "test"; display: block; } ul:after { content: "test"; display: block; }';
 
 
 class Layout extends React.Component {
